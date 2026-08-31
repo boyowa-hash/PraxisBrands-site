@@ -1,1 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raising a concern — Praxis Brands</title>
+<meta name="description" content="How anyone affected by Praxis Brands can raise a concern, and how we respond. No account or login required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;1,400&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&display=swap" rel="stylesheet">
+<style>
+:root{--black:#141210;--paper:#DCD6CA;--grey:#5E5950;--hair:rgba(20,18,16,.20);--hair-w:rgba(255,255,255,.16)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:#1D1A16;font-family:'Archivo',sans-serif;font-weight:400;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1040px;margin:0 auto;padding:0 clamp(26px,7vw,72px)}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-size:10.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--grey)}
 
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;color:#fff;transition:background .5s,color .5s,border-color .5s;border-bottom:1px solid transparent}
+header.solid{background:var(--paper);color:var(--black);border-color:var(--hair)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo-h svg{height:24px;width:auto;display:block}
+.menu{display:flex;gap:28px}
+.menu a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:currentColor;transition:width .3s}
+.menu a:hover::after{width:100%}
+.menu .only-mobile{display:none}
+
+/* hero */
+.hero{background:var(--black);color:#fff;min-height:100svh;display:flex;align-items:center}
+.hero .wrap{width:100%;padding-top:120px;padding-bottom:clamp(60px,12vh,120px)}
+.hero .eyebrow{color:rgba(255,255,255,.55)}
+.hero h1{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(50px,12vw,118px);line-height:.96;letter-spacing:-.01em;margin:38px 0 0}
+.hero h1 em{font-style:italic}
+.hero .sub{max-width:40ch;font-size:clamp(15px,3.6vw,18px);color:rgba(255,255,255,.76);margin-top:40px}
+.hero .strap{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(15px,3.5vw,19px);color:rgba(255,255,255,.55);margin-top:clamp(56px,14vh,120px)}
+
+/* generic section — lots of air, one tone, no boxes */
+section{padding:clamp(110px,20vw,210px) 0}
+.statement{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(27px,5.4vw,46px);line-height:1.32;max-width:18ch;margin-top:40px}
+.statement em{font-style:italic}
+
+/* what we bring — plain airy lines, no borders */
+.brings{margin-top:48px;max-width:620px}
+.brings .item{padding:30px 0;border-top:1px solid var(--hair)}
+.brings .item:last-child{border-bottom:1px solid var(--hair)}
+.brings h3{font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(20px,4vw,26px)}
+.brings p{font-size:14.5px;color:#33302A;margin-top:8px;max-width:46ch}
+
+/* tenets */
+.tenets{list-style:none;margin-top:46px;max-width:680px}
+.tenets li{padding:22px 0;border-top:1px solid var(--hair);font-family:'Bodoni Moda',serif;font-size:clamp(21px,4.6vw,32px)}
+.tenets li:last-child{border-bottom:1px solid var(--hair)}
+
+/* closing (dark) */
+.closing{background:var(--black);color:#fff}
+.closing .pull{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(42px,11vw,104px);line-height:.98;letter-spacing:-.01em;margin-top:34px}
+.closing .pull em{font-style:italic}
+.closing p{max-width:42ch;color:rgba(255,255,255,.76);margin-top:34px;font-size:clamp(15px,3.6vw,18px)}
+.closing .mail{display:inline-block;font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(20px,5vw,30px);margin-top:46px;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:4px;transition:border-color .3s}
+.closing .mail:hover{border-color:#fff}
+.closing .meta{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:34px;line-height:2.1}
+
+/* footer */
+footer{background:var(--black);color:#fff;padding:46px 0 50px;border-top:1px solid var(--hair-w)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+.foot .mark{display:flex;align-items:center;gap:15px}
+.foot .mark svg{height:40px;width:40px}
+.foot .mark .wm{font-family:'Bodoni Moda',serif;font-size:16px;letter-spacing:.2em}
+.foot .copy{font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.4)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:720px){
+  .menu a:not(.only-mobile){display:none}
+  .menu .only-mobile{display:inline}
+}
+@media(prefers-reduced-motion:reduce){.rv{transition:none;opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* ---- interior pages ---- */
+.page-hero{background:var(--black);color:#fff;padding:clamp(150px,22vh,210px) 0 clamp(70px,12vh,110px)}
+.page-hero .eyebrow{color:rgba(255,255,255,.55)}
+.page-hero h1{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(40px,9vw,86px);line-height:1;letter-spacing:-.01em;margin:34px 0 0}
+.page-hero h1 em{font-style:italic}
+.page-hero .sub{max-width:44ch;font-size:clamp(15px,3.6vw,18px);color:rgba(255,255,255,.72);margin-top:34px}
+.prose{padding:clamp(72px,12vw,130px) 0}
+.prose .block{max-width:660px}
+.prose .block+.block{margin-top:clamp(56px,9vw,92px)}
+.prose h2{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(24px,5vw,38px);line-height:1.25;margin-bottom:26px}
+.prose h3{font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(18px,3.8vw,22px);margin-bottom:8px}
+.prose p{font-size:15.5px;color:#33302A;margin-bottom:18px}
+.prose p.lede{font-family:'Bodoni Moda',serif;font-size:clamp(20px,4.4vw,28px);line-height:1.42;color:var(--black);max-width:24ch;margin-bottom:30px}
+.prose p.pull{font-family:'Bodoni Moda',serif;font-size:clamp(19px,4vw,26px);line-height:1.45;color:var(--black);max-width:30ch}
+.prose a.inline{border-bottom:1px solid var(--hair);transition:border-color .3s}
+.prose a.inline:hover{border-color:var(--black)}
+.prose ul{list-style:none;margin:8px 0 18px}
+.prose ul li{padding:18px 0;border-top:1px solid var(--hair);font-size:15.5px;color:#33302A}
+.prose ul li:last-child{border-bottom:1px solid var(--hair)}
+.prose ul li strong{color:var(--black);font-weight:500}
+.prose ol.steps{list-style:none;counter-reset:s;margin:8px 0 18px}
+.prose ol.steps li{counter-increment:s;padding:20px 0 20px 46px;border-top:1px solid var(--hair);position:relative;font-size:15.5px;color:#33302A}
+.prose ol.steps li:last-child{border-bottom:1px solid var(--hair)}
+.prose ol.steps li::before{content:counter(s);position:absolute;left:0;top:20px;font-family:'Bodoni Moda',serif;font-size:17px;color:var(--grey)}
+.targets{width:100%;border-collapse:collapse;margin:8px 0 18px;font-size:14.5px}
+.targets th{text-align:left;font-weight:500;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey);padding:0 0 14px;border-bottom:1px solid var(--hair)}
+.targets th:last-child,.targets td:last-child{text-align:right;white-space:nowrap;padding-left:18px}
+.targets td{padding:16px 0;border-bottom:1px solid var(--hair);color:#33302A;vertical-align:top}
+.contacts{margin:8px 0 18px}
+.contacts .row{padding:20px 0;border-top:1px solid var(--hair)}
+.contacts .row:last-child{border-bottom:1px solid var(--hair)}
+.contacts .row .k{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
+.contacts .row .v{font-family:'Bodoni Moda',serif;font-size:clamp(17px,3.6vw,21px);margin-top:7px}
+.contacts .row .v a{border-bottom:1px solid var(--hair);transition:border-color .3s}
+.contacts .row .v a:hover{border-color:var(--black)}
+.contacts .row p{font-size:14px;color:var(--grey);margin:7px 0 0}
+.note{font-size:13.5px;color:var(--grey);border-left:1px solid var(--hair);padding-left:20px;margin:26px 0 0}
+.docmeta{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-top:clamp(56px,9vw,86px);padding-top:22px;border-top:1px solid var(--hair)}
+.foot .flinks{display:flex;gap:26px;flex-wrap:wrap}
+.foot .flinks a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);transition:color .3s}
+.foot .flinks a:hover{color:#fff}
+</style></head>
+<body id="top">
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="/" class="logo-h" aria-label="Praxis Brands"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 402.0 96" width="402" height="96"><rect x="2" y="2" width="92" height="92" fill="none" stroke="currentColor" stroke-width="4"/><g fill="currentColor"><path transform="translate(26.65,74.25) scale(0.03500,-0.03500)" d="M654.2402478492058 1500Q837.8147218227386 1500 954.641832228783 1448.907628613255Q1071.4689426348273 1397.8152572265099 1127.355741199139 1303.7061548407291Q1183.2425397634506 1209.5970524549484 1183.2425397634506 1079.598310597579Q1183.2425397634506 949.5995687402095 1127.3481353453824 859.9100536256217Q1071.4537309273142 770.220538511034 954.823111449939 723.5496453713159Q838.1924919725639 676.8787522315979 654.0144288539886 676.8787522315979H440.47500014305115V5.3330078125H619.6150147914886V0H36.83339858055115V5.3330078125H216.01149916648865V1494.6669921875H36.83339858055115V1500ZM440.47500014305115 682.2117600440979H642.8132569789886Q712.6600475897554 682.2117600440979 766.2199093992592 718.6165452003479Q819.7797712087631 755.0213303565979 855.6959281563759 814.4170939118417Q891.6120851039886 873.8128574670855 910.2119386196136 943.2365847104332Q928.8117921352386 1012.660311953781 928.8117921352386 1079.6602118194003Q928.8117921352386 1146.6601116850197 910.2119386196136 1218.9926149941593Q891.6120851039886 1291.325118303299 855.6959281563759 1354.1320223212242Q819.7797712087631 1416.9389263391495 766.4091383951609 1455.8029592633247Q713.0385055815588 1494.6669921875 642.8132569789886 1494.6669921875H440.47500014305115Z"/></g><g fill="currentColor"><path transform="translate(130.000,69.750) scale(0.02900,-0.02900)" d="M654.2402478492058 1500Q837.8147218227386 1500 954.641832228783 1448.907628613255Q1071.4689426348273 1397.8152572265099 1127.355741199139 1303.7061548407291Q1183.2425397634506 1209.5970524549484 1183.2425397634506 1079.598310597579Q1183.2425397634506 949.5995687402095 1127.3481353453824 859.9100536256217Q1071.4537309273142 770.220538511034 954.823111449939 723.5496453713159Q838.1924919725639 676.8787522315979 654.0144288539886 676.8787522315979H440.47500014305115V5.3330078125H619.6150147914886V0H36.83339858055115V5.3330078125H216.01149916648865V1494.6669921875H36.83339858055115V1500ZM440.47500014305115 682.2117600440979H642.8132569789886Q712.6600475897554 682.2117600440979 766.2199093992592 718.6165452003479Q819.7797712087631 755.0213303565979 855.6959281563759 814.4170939118417Q891.6120851039886 873.8128574670855 910.2119386196136 943.2365847104332Q928.8117921352386 1012.660311953781 928.8117921352386 1079.6602118194003Q928.8117921352386 1146.6601116850197 910.2119386196136 1218.9926149941593Q891.6120851039886 1291.325118303299 855.6959281563759 1354.1320223212242Q819.7797712087631 1416.9389263391495 766.4091383951609 1455.8029592633247Q713.0385055815588 1494.6669921875 642.8132569789886 1494.6669921875H440.47500014305115Z"/><path transform="translate(175.936,69.750) scale(0.02900,-0.02900)" d="M396.8440637588501 767.5307879447937V772.2597533464432H694.0559392595022Q790.1046378572108 772.2597533464432 856.3878414610685 814.9009084105492Q922.6710450649261 857.5420634746552 956.9709718227386 937.6298652234206Q991.2708985805511 1017.717666972186 991.2708985805511 1129.5742064714432Q991.2708985805511 1241.3744994401932 956.9709718227386 1323.3689997196198Q922.6710450649261 1405.3634999990463 856.1828492686345 1450.0152460932732Q789.694653472343 1494.6669921875 694.0384382009506 1494.6669921875H36.83339858055115V1500H708.088783792087Q863.2695929450648 1500 979.6053705534764 1461.4017399549484Q1095.9411481618881 1422.8034799098969 1160.394070804119 1341.18884319067Q1224.84699344635 1259.5742064714432 1224.84699344635 1129.5742064714432Q1224.84699344635 999.5742064714432 1164.3967370986938 919.9044773941899Q1103.9464807510376 840.2347483169367 988.5651774948153 803.8827681308652Q873.1838742385929 767.5307879447937 708.0399030447006 767.5307879447937ZM36.83339858055115 0V5.3330078125H689.2738282680511V0ZM250.41091322898865 2.7236328125V1497.1065100431442H474.8416608572006V2.7236328125ZM1198.0399030447006 -11.400146484375Q1106.8394635915756 -11.400146484375 1055.6091779470444 21.310907105261066Q1004.3788923025131 54.02196069489713 980.8387311697006 109.68711941077143Q957.2985700368881 165.35227812664573 951.0984967947006 234.56252412303473Q944.8984235525131 303.77277011942374 943.9684308767319 377.6474668699152Q943.0384382009506 451.52216362040673 936.4584821462631 520.7324096167957Q929.8785260915756 589.9426556131848 906.4385846853256 645.6790425675972Q882.9986432790756 701.4154295220095 830.9041681112205 734.1684212334017Q778.8096929433655 766.9214129447937 686.784249926005 766.9214129447937H396.8440637588501V771.5688738822937H760.4422467947006Q905.5359369913737 771.5688738822937 990.6878514488537 729.747806429863Q1075.839765906334 687.9267389774323 1117.653403043747 619.5600397586823Q1159.46704018116 551.1933405399323 1173.012408554554 468.9674879312515Q1186.557776927948 386.7416353225708 1186.9478493332863 304.5157827138901Q1187.3379217386246 222.28993010520935 1189.3870517611504 153.92323088645935Q1191.4361817836761 85.55653166770935 1210.4898124337196 43.735464215278625Q1229.5434430837631 1.9143967628479004 1282.4451830387115 1.9143967628479004Q1314.4451830387115 1.9143967628479004 1342.933949291706 9.167384207248688Q1371.4227155447006 16.420371651649475 1392.38996219635 26.420371651649475L1394.8416608572006 23.08203125Q1370.8416608572006 10.08203125 1320.702873468399 -0.6590576171875Q1270.5640860795975 -11.400146484375 1198.0399030447006 -11.400146484375Z"/><path transform="translate(226.367,69.750) scale(0.02900,-0.02900)" d="M401.5206536054611 485.5845750570297V490.9175828695297H1019.5783380270004V485.5845750570297ZM794.6039891242981 1529.9619140625 1323.1142045259476 5.3330078125H1465.4967278242111V0H857.40314412117V5.3330078125H1064.7754209041595L666.9722949266434 1237.6594483852386L235.29409193992615 5.3330078125H476.8440637588501V0H36.83339858055115V5.3330078125H229.49906422309525L762.3866531848907 1529.9619140625Z"/><path transform="translate(279.176,69.750) scale(0.02900,-0.02900)" d="M880.0571084022522 0V5.3330078125H1069.6229231357574L212.72056710720062 1494.6669921875H89.9260950088501V1500H683.502189874649V1494.6669921875H478.3240827322006L1344.08642411232 5.3330078125H1474.0536642074585V0ZM20.753327012062073 0V5.3330078125H243.13377594947815L763.8250076770782 834L771.0389142036438 833.0501528978348L250.73338532447815 5.3330078125H499.6313148736954V0ZM747.2216198444366 756.1617209911346 1182.5211681127548 1494.6669921875H925.1429229974747V1500H1364.0536642074585V1494.6669921875H1189.8611724376678L754.1714948415756 755.1136138439178Z"/><path transform="translate(331.782,69.750) scale(0.02900,-0.02900)" d="M36.83339858055115 0V5.3330078125H255.96591446949884V1494.6669921875H36.83339858055115V1500H720.4422467947006V1494.6669921875H480.4919755550531V5.3330078125H720.4422467947006V0Z"/><path transform="translate(362.986,69.750) scale(0.02900,-0.02900)" d="M589.456695318222 -29.9619140625Q460.80319476127625 -29.9619140625 371.60156041383743 10.567100167274475Q282.3999260663986 51.09611439704895 223.26358008384705 120.36499679088593L92.85729241371155 -20H87.69871652126312V406.8345111608505H93.30642104148865Q113.62335407733917 317.9664306640625 150.70757603645325 240.12371826171875Q187.79179799556732 162.281005859375 245.62719559669495 103.111083984375Q303.46259319782257 43.941162109375 384.7716879248619 10.51611328125Q466.08078265190125 -22.908935546875 575.5780971050262 -22.908935546875Q678.7671389579773 -22.908935546875 755.6182647943497 15.3329336643219Q832.469390630722 53.5748028755188 875.1495602726936 126.22278732061386Q917.8297299146652 198.87077176570892 917.8297299146652 301.92665457725525Q917.8297299146652 388.10646414756775 873.8624832630157 447.4099116921425Q829.8952366113663 506.7133592367172 757.9116132855415 550.296836078167Q685.9279899597168 593.8803129196167 599.4771199822426 631.9910950064659Q513.0262500047684 670.1018770933151 426.57538002729416 711.9991164207458Q340.12451004981995 753.8963557481766 268.1408867239952 810.2736976146698Q196.15726339817047 866.651039481163 152.190016746521 946.804889857769Q108.22277009487152 1026.958740234375 108.22277009487152 1141.59912109375Q108.22277009487152 1255.8323138952255 167.14379388093948 1341.066120326519Q226.06481766700745 1426.2999267578125 322.11140674352646 1473.1499633789062Q418.15799582004547 1520 530.656402349472 1520Q629.4778200387955 1520 709.628374516964 1488.859130859375Q789.7789289951324 1457.71826171875 847.8825216293335 1392.6549006700516L976.072095990181 1520H981.176588177681V1098.7607421875H975.601637005806Q950.001051068306 1237.383551478386 891.1319202780724 1329.0355482697487Q832.2627894878387 1420.6875450611115 744.9096339344978 1465.935588657856Q657.5564783811569 1511.1836322546005 547.8766819238663 1511.1836322546005Q410.2314248085022 1511.1836322546005 339.0936295390129 1440.3226773142815Q267.9558342695236 1369.4617223739624 267.9558342695236 1254.9455189704895Q267.9558342695236 1177.7603768110275 311.07947224378586 1123.539551615715Q354.2031102180481 1069.3187264204025 424.4831395149231 1027.691567659378Q494.7631688117981 986.0644088983536 579.5268214344978 947.9635755419731Q664.2904740571976 909.8627421855927 749.0514603853226 865.358241558075Q833.8124467134476 820.8537409305573 904.0924760103226 760.4992036819458Q974.3725053071976 700.1446664333344 1017.4961432814598 614.8700852394104Q1060.619781255722 529.5955040454865 1060.619781255722 408.40087890625Q1060.619781255722 275.6005859375 1001.819488286972 177.2130544781685Q943.019195318222 78.82552301883698 836.737945318222 24.431804478168488Q730.456695318222 -29.9619140625 589.456695318222 -29.9619140625Z"/></g></svg></a>
+    <nav class="menu">
+      <a href="/purpose">Purpose</a>
+      <a href="/grievance">Concerns</a>
+      <a href="/jedi">Inclusion</a>
+      <a href="/#approach">Philosophy</a>
+      <a href="/#contact">Contact</a>
+      <a href="/#contact" class="only-mobile">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Stakeholder grievance procedure</span>
+      <h1>Raising<br><em>a concern.</em></h1>
+      <p class="sub">If something about how we work has affected you, tell us. This page explains how, and what happens next.</p>
+    </div>
+  </section>
+
+  <section class="prose">
+    <div class="wrap">
+
+      <div class="block rv">
+        <p class="lede">Anyone can use this. It is free, and you do not need to know anything about how we are organised.</p>
+        <p>Our workers and contractors, our suppliers and their workers, our clients and brand partners, people who use products we make, and anyone in the communities where we operate.</p>
+      </div>
+
+      <div class="block rv">
+        <h2>How to raise a concern</h2>
+        <div class="contacts">
+          <div class="row">
+            <div class="k">By email</div>
+            <div class="v"><a href="mailto:boyowa@praxisbrands.co.uk">boyowa@praxisbrands.co.uk</a></div>
+            <p>To the Grievance Officer.</p>
+          </div>
+          <div class="row">
+            <div class="k">By post</div>
+            <div class="v">The Grievance Officer, Praxis Brands Ltd</div>
+            <p>Studio 108, 183A Anerley Road, London SE20 8EF</p>
+          </div>
+          <div class="row">
+            <div class="k">In person</div>
+            <div class="v">To any manager</div>
+            <p>They will write it down and check the record with you.</p>
+          </div>
+          <div class="row">
+            <div class="k">About a director</div>
+            <div class="v"><a href="mailto:robert@praxisbrands.co.uk">robert@praxisbrands.co.uk</a></div>
+            <p>Robert Price, Director. Concerns about the Managing Director or about management decisions are handled from receipt by the Alternate, who takes them to the Board in full.</p>
+          </div>
+        </div>
+        <p class="note">We are appointing an independent external channel for raising concerns, so that anyone can report without coming to us first &mdash; including about our directors. Target: Q1 2027. Until it is in place, the route above applies.</p>
+      </div>
+
+      <div class="block rv">
+        <h2>You do not have to give your name</h2>
+        <p>Anonymous concerns are recorded, assigned a named owner and investigated as far as the information allows. Where we cannot reach you, we still record the outcome, and where it is appropriate we summarise it in our annual grievance summary so that our response is visible.</p>
+      </div>
+
+      <div class="block rv">
+        <h2>What happens next</h2>
+        <ol class="steps">
+          <li><strong>We acknowledge within 5 working days</strong> and tell you who is handling it and by when.</li>
+          <li><strong>We assign a named person</strong> who is accountable for resolving it &mdash; not a team, and not &ldquo;the company&rdquo;.</li>
+          <li><strong>We investigate impartially.</strong> Nobody decides on a matter they are personally involved in.</li>
+          <li><strong>We respond in writing within 20 working days</strong> of acknowledging. If we need longer, we tell you before that deadline passes, and why.</li>
+          <li><strong>You can ask for a review</strong> within 10 working days if you are not satisfied. A director not previously involved carries it out.</li>
+        </ol>
+      </div>
+
+      <div class="block rv">
+        <h2>What we will not do</h2>
+        <p>We will not retaliate against anyone who raises a concern in good faith, or who supports or gives evidence in one. For suppliers, that includes your commercial relationship with us. Retaliation is itself treated as a concern of the highest priority and goes to our Board.</p>
+      </div>
+
+      <div class="block rv">
+        <h2>What we do with what you tell us</h2>
+        <p>Every concern goes into a register with a named owner and a target date. Our Board reviews it quarterly. Once a year we publish a summary: how many concerns we received, how long we took, how many we were late on, and what changed as a result.</p>
+        <p>Information about a concern is shared only with those who need it to resolve the matter, held securely, and processed under UK GDPR and the Data Protection Act 2018.</p>
+        <p><a class="inline" href="/grievance/praxis-brands-stakeholder-grievance-procedure.pdf">Download the full Stakeholder Grievance Procedure (PDF) &rarr;</a></p>
+        <p class="docmeta">Praxis Brands Ltd &middot; Company No. 17222158 &middot; Version 2.1 &middot; Adopted 15 August 2026</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><rect x="3" y="3" width="194" height="194" fill="none" stroke="currentColor" stroke-width="5"/><g fill="currentColor"><path transform="translate(54.247,156.250) scale(0.07500,-0.07500)" d="M654.2402478492058 1500Q837.8147218227386 1500 954.641832228783 1448.907628613255Q1071.4689426348273 1397.8152572265099 1127.355741199139 1303.7061548407291Q1183.2425397634506 1209.5970524549484 1183.2425397634506 1079.598310597579Q1183.2425397634506 949.5995687402095 1127.3481353453824 859.9100536256217Q1071.4537309273142 770.220538511034 954.823111449939 723.5496453713159Q838.1924919725639 676.8787522315979 654.0144288539886 676.8787522315979H440.47500014305115V5.3330078125H619.6150147914886V0H36.83339858055115V5.3330078125H216.01149916648865V1494.6669921875H36.83339858055115V1500ZM440.47500014305115 682.2117600440979H642.8132569789886Q712.6600475897554 682.2117600440979 766.2199093992592 718.6165452003479Q819.7797712087631 755.0213303565979 855.6959281563759 814.4170939118417Q891.6120851039886 873.8128574670855 910.2119386196136 943.2365847104332Q928.8117921352386 1012.660311953781 928.8117921352386 1079.6602118194003Q928.8117921352386 1146.6601116850197 910.2119386196136 1218.9926149941593Q891.6120851039886 1291.325118303299 855.6959281563759 1354.1320223212242Q819.7797712087631 1416.9389263391495 766.4091383951609 1455.8029592633247Q713.0385055815588 1494.6669921875 642.8132569789886 1494.6669921875H440.47500014305115Z"/></g></svg><span class="wm">PRAXIS BRANDS</span></div>
+    <div class="flinks"><a href="/purpose">Purpose</a><a href="/grievance">Raising a concern</a><a href="/jedi">Inclusion</a><a href="/#founders">Founders</a></div>
+    <span class="copy">&copy; 2026 Praxis Brands Ltd &middot; Company No. 17222158 &middot; Where beauty grows.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  function s(){hdr.classList.toggle('solid',window.scrollY>60);}
+  window.addEventListener('scroll',s,{passive:true});s();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body></html>
