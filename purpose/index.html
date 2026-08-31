@@ -74,8 +74,10 @@ footer{background:var(--black);color:#fff;padding:46px 0 50px;border-top:1px sol
 .rv.in{opacity:1;transform:none}
 
 @media(max-width:720px){
-  .menu a:not(.only-mobile){display:none}
-  .menu .only-mobile{display:inline}
+  .menu{gap:13px;flex-wrap:wrap;justify-content:flex-end;max-width:62%}
+  .menu a{font-size:9.5px;letter-spacing:.10em}
+  .menu a:not(.only-mobile){display:inline}
+  .menu .only-mobile{display:none}
 }
 @media(prefers-reduced-motion:reduce){.rv{transition:none;opacity:1;transform:none}html{scroll-behavior:auto}}
 
